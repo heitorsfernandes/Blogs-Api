@@ -1,10 +1,14 @@
 const express = require('express');
 
 // ....
+const controllers = require('./controllers/controller.login');
+const { validationLogin } = require('./middlewares/validationLogin');
 
 const app = express();
 
 app.use(express.json());
+
+app.post('/login', validationLogin, controllers.login );
 
 // ...
 

@@ -14,15 +14,15 @@ module.exports = (sequelize) => {
         image: DataTypes.STRING,
     }, {
         timestamps: false,
-        tablename: 'users',
+        tableName: 'users',
     })
 
-    User.associate = (models) => {
-        User.hasMany(models.BlogPost, {
-            foreignKey: 'user_id',
-            as: 'blog_post'
-        })
-    };
+    // User.associate = (models) => {
+    //     User.hasMany(models.BlogPost, {
+    //         foreignKey: 'user_id',
+    //         as: 'blog_post'
+    //     })
+    // };
 
     return User;
 }
