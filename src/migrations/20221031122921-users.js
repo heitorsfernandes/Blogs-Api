@@ -13,14 +13,12 @@ module.exports = {
       },
       display_name: {
         type: DataTypes.STRING,
-        allowNull:false,
       },
       email: {
         type: DataTypes.STRING,
       },
       password: {
         type: DataTypes.STRING,
-        allowNull:false,
       },
       image: {
         type: DataTypes.STRING,
