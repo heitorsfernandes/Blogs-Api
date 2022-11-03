@@ -19,7 +19,9 @@ const getAllUsers = async () => {
     const users = await User.findAll({
     attributes: { exclude: ['password'] },
     });
-    return { status: 200, message: users };
+    const newUsers = users.map(({ dataValues }) => dataValues);
+    console.log(newUsers);
+    return { status: 200, message: newUsers };
 };
 
 module.exports = {
