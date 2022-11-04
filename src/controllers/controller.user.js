@@ -13,7 +13,8 @@ const getAllUsers = async (req, res) => {
 };
 
 const getUserById = async (req, res) => {
-  const { status, message } = await servicesUser.getUserById();
+  const { id } = req.params;
+  const { status, message } = await servicesUser.getUserById(id);
 
     return res.status(status).json(message);
 };
